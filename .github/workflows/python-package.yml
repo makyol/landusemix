@@ -1,8 +1,6 @@
 name: Upload Python Package to PyPI
 
-on:
-  release:
-    types: [published]
+on: [push]
 
 permissions:
   contents: read
