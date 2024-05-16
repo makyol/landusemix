@@ -3,8 +3,8 @@
 
 # -- Project information -----------------------------------------------------
 project = 'Land Use Mix'
-author = 'Author Name'
-release = '1.0.0'
+author = 'Mehmet Ali Akyol'
+release = '0.0.1'
 
 # -- General configuration ---------------------------------------------------
 extensions = [
