@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="landusemix",
-    version="0.0.2",
+    version="0.0.3",
     author="Mehmet Ali Akyol",
     author_email="akyol.mehmet@metu.edu.tr",
     description="A package for calculating land use mix indices",
