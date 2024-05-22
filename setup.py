@@ -11,6 +11,7 @@ setup(
     url="https://github.com/makyol/landusemix",
     packages=find_packages(),
     include_package_data=True,
+    package_data={'landusemix': ['data/']},
     install_requires=[
         'pandas',
         'geopandas',
