@@ -1,0 +1,10 @@
+{
+"type": "FeatureCollection",
+"name": "multiple",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "use": "residential" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 0.0, 10.0 ], [ 4.0, 0.0 ], [ 0.0, 0.0 ], [ 0.0, 10.0 ] ] ] ] } },
+{ "type": "Feature", "properties": { "id": 2, "use": "commercial" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 0.0, 10.0 ], [ 10.0, 10.0 ], [ 1.753955319557038, 5.707345882669782 ], [ 0.0, 10.0 ] ] ] ] } },
+{ "type": "Feature", "properties": { "id": 3, "use": "industrial" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 10.0, 10.0 ], [ 10.0, 0.0 ], [ 4.0, 0.0 ], [ 1.690284160969189, 5.707345882669782 ], [ 10.0, 10.0 ] ] ] ] } }
+]
+}

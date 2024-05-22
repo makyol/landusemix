@@ -9,6 +9,8 @@ class LandUseMixIndices:
     def entropy_index(self):
         total_area = sum(self.land_use_areas.values())
         k = len(self.land_use_areas)
+        if k == 1:
+            return 0
         entropy = -sum((area / total_area) * math.log(area / total_area)
                        for area in self.land_use_areas.values()) / math.log(k)
         return entropy

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="landusemix",
-    version="0.0.3",
+    version="0.0.4",
     author="Mehmet Ali Akyol",
     author_email="akyol.mehmet@metu.edu.tr",
     description="A package for calculating land use mix indices",
@@ -14,8 +14,6 @@ setup(
     install_requires=[
         'pandas',
         'geopandas',
-        'shapely',
-        'folium',
     ],
     classifiers=[
         "Programming Language :: Python :: 3",

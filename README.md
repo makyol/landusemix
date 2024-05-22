@@ -56,6 +56,51 @@ hhi = mix_indices.herfindahl_hirschman_index()
 print(f"Herfindahl-Hirschman Index: {hhi}")
 ```
 
+You can also load data from various formats including GeoJSON, Shapefile, and CSV.
+
+#### Example: Loading GeoJSON Data
+
+```python
+geojson_data = load_geojson('path_to_your_file.geojson')
+```
+
+#### Example: Loading Shapefile Data
+
+```python
+shapefile_data = load_shapefile('path_to_your_file.shp')
+```
+
+#### Example: Loading CSV Data
+
+```python
+csv_data = load_csv('path_to_your_file.csv')
+```
+
+### Using Sample Data
+
+The package includes sample data files for testing and demonstration purposes.
+
+#### Example: Loading Sample GeoJSON Data
+
+```python
+sample_geojson = load_sample_geojson()
+print(sample_geojson)
+```
+
+#### Example: Loading Sample Shapefile Data
+
+```python
+sample_shapefile = load_sample_shapefile()
+print(sample_shapefile)
+```
+
+#### Example: Loading Sample CSV Data
+
+```python
+sample_csv = load_sample_csv()
+print(sample_csv)
+```
+
 ## Indices Description
 
 - **Entropy Index**: 

@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "one",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "use": "residential" }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ 0.0, 0.0 ], [ 0.0, 10.0 ], [ 10.0, 10.0 ], [ 10.0, 0.0 ], [ 0.0, 0.0 ] ] ] ] } }
+]
+}
