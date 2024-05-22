@@ -1,8 +1,9 @@
+import glob
 from setuptools import setup, find_packages
 
 setup(
     name="landusemix",
-    version="0.0.5",
+    version="0.0.6",
     author="Mehmet Ali Akyol",
     author_email="akyol.mehmet@metu.edu.tr",
     description="A package for calculating land use mix indices",
@@ -11,7 +12,7 @@ setup(
     url="https://github.com/makyol/landusemix",
     packages=find_packages(),
     include_package_data=True,
-    package_data={'landusemix': ['data/']},
+    package_data={'landusemix': glob.glob('landusemix/data/*')},
     install_requires=[
         'pandas',
         'geopandas',
