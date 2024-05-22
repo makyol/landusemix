@@ -12,6 +12,18 @@ setup(
     url="https://github.com/makyol/landusemix",
     packages=find_packages(),
     include_package_data=True,
+        package_data={
+        'landusemix': [
+            'data/geojson/*.geojson',
+            'data/*.csv',
+            'data/shapefiles/*.shp',
+            'data/shapefiles/*.shx',
+            'data/shapefiles/*.dbf',
+            'data/shapefiles/*.cpg',
+            'data/shapefiles/*.prj',
+            'data/shapefiles/*.qix',
+        ],
+    },
     install_requires=[
         'pandas',
         'geopandas',
