@@ -83,22 +83,26 @@ The package includes sample data files for testing and demonstration purposes.
 #### Example: Loading Sample GeoJSON Data
 
 ```python
-sample_geojson = load_sample_geojson()
-print(sample_geojson)
+geojson_gdf = load_sample_geojson()
+geojson_gdf['area'] = geojson_gdf.geometry.area
+sample_land_use_areas = geojson_gdf.groupby('use')['area'].sum().to_dict()
+print(sample_land_use_areas)
 ```
 
 #### Example: Loading Sample Shapefile Data
 
 ```python
-sample_shapefile = load_sample_shapefile()
-print(sample_shapefile)
+shapefile_gdf = load_sample_shapefile()
+shapefile_gdf['area'] = shapefile_gdf.geometry.area  # Ensure the CRS is in a metric format for accurate area calculation 
+sample_land_use_areas = shapefile_gdf.groupby('use')['area'].sum().to_dict()
+print(sample_land_use_areas)
 ```
 
 #### Example: Loading Sample CSV Data
 
 ```python
-sample_csv = load_sample_csv()
-print(sample_csv)
+sample_land_use_areas = sample_csv.set_index('use')['area'].to_dict()
+print(sample_land_use_areas)
 ```
 
 ## Indices Description
