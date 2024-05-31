@@ -4,7 +4,7 @@
 # -- Project information -----------------------------------------------------
 project = 'Land Use Mix'
 author = 'Mehmet Ali Akyol'
-release = '0.0.9'
+release = '0.1.0'
 
 # -- General configuration ---------------------------------------------------
 extensions = [
