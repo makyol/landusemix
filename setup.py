@@ -27,6 +27,7 @@ setup(
     install_requires=[
         'pandas',
         'geopandas',
+        'rasterio',
     ],
     classifiers=[
         "Programming Language :: Python :: 3",

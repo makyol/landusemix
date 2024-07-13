@@ -2,6 +2,7 @@
 import json
 import pandas as pd
 import geopandas as gpd
+import rasterio
 import os
 
 
@@ -31,6 +32,11 @@ def load_csv(filepath):
     """Load a CSV file into a DataFrame."""
     return pd.read_csv(filepath)
 
+# Add a function to load raster data
+def load_raster(filepath):
+    """Load a raster file into a GeoDataFrame."""
+    with rasterio.open(filepath) as src:
+        return src.read(1)
 
 def load_sample_geojson():
     """Load the included sample GeoJSON file."""
@@ -50,3 +56,9 @@ def load_sample_csv():
     """Load the included sample CSV file."""
     sample_path = os.path.join(os.path.dirname(__file__), 'data', 'sample.csv')
     return load_csv(sample_path)
+
+def load_sample_raster():
+    """Load the included sample raster file."""
+    sample_path = os.path.join(os.path.dirname(__file__), 'data', 'raster.tif')
+    print(sample_path)
+    return load_raster(sample_path)
