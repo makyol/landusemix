@@ -22,6 +22,7 @@ setup(
             'data/shapefiles/*.cpg',
             'data/shapefiles/*.prj',
             'data/shapefiles/*.qix',
+            'data/*.tif'
         ],
     },
     install_requires=[
