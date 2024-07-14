@@ -111,15 +111,15 @@ print(sample_land_use_areas)
 
 The entropy index (ENT) is a measure of diversity in land use types within a given area. It is calculated using the following formula:
 
-$$ \mathrm{ENT}=-\frac{\left[\sum_{i=1}^k P^i \ln \left(P^i\right)\right]}{\ln (k)} $$
+$$ \mathrm{ENT}=-\frac{\left[\sum_{i=1}^k P_i \ln \left(P_i\right)\right]}{\ln (k)} $$
 
 Here's an explanation of the parameters in this formula:
 
-$P^i$: This represents the proportion of the total area that is occupied by the ith land use type. It is calculated by dividing the area of the ith land use type by the total area.
+$P_i$: This represents the proportion of the total area that is occupied by the ith land use type. It is calculated by dividing the area of the ith land use type by the total area.
 
-$ln(P^i)$: This is the natural logarithm of P^i.
+$ln(P_i)$: This is the natural logarithm of P_i.
 
-$\sum$: This is the sum operator. It sums the product of P^i and ln(P^i) for all land use types from i = 1 to i = k.
+$\sum$: This is the sum operator. It sums the product of P_i and ln(P_i) for all land use types from i = 1 to i = k.
 
 $k$: This is the total number of different land use types.
 
@@ -131,15 +131,15 @@ The ENT value will be between 0 and 1. A higher ENT value indicates a more diver
 
 The Herfindahl-Hirschman Index (HHI) is a measure of the concentration of land use types within a given area. It is calculated using the following formula:
 
-$$ \mathrm{HHI}=\sum_{i=1}^k\left(100 \times P^i\right)^2 $$
+$$ \mathrm{HHI}=\sum_{i=1}^k\left(100 \times P_i\right)^2 $$
 
 Here's an explanation of the parameters in this formula:
 
-$P^i$: This represents the proportion of the total area that is occupied by the ith land use type. It is calculated by dividing the area of the ith land use type by the total area.
+$P_i$: This represents the proportion of the total area that is occupied by the ith land use type. It is calculated by dividing the area of the ith land use type by the total area.
 
-$100 x P^i$: This is the proportion of the ith land use type, expressed as a percentage.
+$100 x P_i$: This is the proportion of the ith land use type, expressed as a percentage.
 
-$(100 x P^i)^2$: This squares the percentage proportion of the ith land use type.
+$(100 x P_i)^2$: This squares the percentage proportion of the ith land use type.
 
 $\sum$: This is the sum operator. It sums the squared percentage proportions for all land use types from i = 1 to i = k.
 
