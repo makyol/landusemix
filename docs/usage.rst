@@ -25,3 +25,61 @@ Here's how you can use the `landusemix` package to calculate the entropy and HHI
     # Calculate the Herfindahl-Hirschman Index (HHI)
     hhi = mix_indices.herfindahl_hirschman_index()
     print(f"Herfindahl-Hirschman Index: {hhi}")
+
+.. code-block:: python
+
+    # Output:
+    # Entropy Index: 0.5986122886681098
+    # Herfindahl-Hirschman Index: 0.3333333333333333
+
+Display the raster.tif
+============================
+If you want to display the input raster data, the following code snippet demonstrates how to display a raster image using the `rasterio` package.
+
+.. code-block:: python
+
+    import rasterio
+    import matplotlib.pyplot as plt
+
+    # Open the raster file
+    with rasterio.open('raster.tif') as src:
+        # Read the raster image
+        raster_image = src.read(1)
+
+        # Display the raster image
+        plt.imshow(raster_image, cmap='viridis')
+        plt.colorbar()
+        plt.show()
+
+.. code-block:: python
+    
+        # Output:
+        # Display the raster image in a matplotlib plot.
+
+Adjust the size of the image
+
+.. image:: raster.png 
+    :alt: An example raster image
+    :align: center
+
+
+Display the shapefile.shp file
+==================================
+If you want to display the input raster data, the following code snippet demonstrates how to display a shapefile using the `geopandas` package.
+
+.. code-block:: python
+
+    import geopandas as gpd
+    import matplotlib.pyplot as plt
+
+    # Read the shapefile
+    gdf = gpd.read_file('landusemix/data/shapefiles/multiple.shp')
+
+    # Display the shapefile using matplotlib with different colors for each land use
+    fig, ax = plt.subplots()
+    gdf.plot(column='use', ax=ax, legend=True)
+    plt.show()
+
+.. image:: multiple.png
+    :alt: An example shapefile visualization
+    :align: center
