@@ -1,3 +1,6 @@
+"""
+This module contains a class that calculates land use mix indices.
+"""
 import math
 
 class LandUseMixIndices:
