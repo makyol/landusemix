@@ -32,7 +32,7 @@ Here's how you can use the `landusemix` package to calculate the entropy and HHI
     # Entropy Index: 0.5986122886681098
     # Herfindahl-Hirschman Index: 0.3333333333333333
 
-Display the raster.tif
+Display Raster
 ============================
 If you want to display the input raster data, the following code snippet demonstrates how to display a raster image using the `rasterio` package.
 
@@ -63,7 +63,7 @@ Adjust the size of the image
     :align: center
 
 
-Display the shapefile.shp file
+Display Shapefile
 ==================================
 If you want to display the input raster data, the following code snippet demonstrates how to display a shapefile using the `geopandas` package.
 
@@ -83,3 +83,21 @@ If you want to display the input raster data, the following code snippet demonst
 .. image:: multiple.png
     :alt: An example shapefile visualization
     :align: center
+
+Display Results
+============================
+Below is an example of how to visualize the calculated indices using the `matplotlib` package.
+
+.. code-block:: python
+    
+    import matplotlib.pyplot as plt
+    import geopandas as gpd
+
+    # Assuming 'results' is a GeoDataFrame with calculated indices
+    results.plot(column='Entropy_Index', legend=True, cmap='viridis')
+    plt.title('Entropy Index Visualization')
+    plt.show()
+
+    results.plot(column='HHI', legend=True, cmap='plasma')
+    plt.title('Herfindahl-Hirschman Index Visualization')
+    plt.show()
