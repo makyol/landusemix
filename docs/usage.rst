@@ -89,7 +89,7 @@ Display Results
 Below is an example of how to visualize the calculated indices using the `matplotlib` package.
 
 .. code-block:: python
-    
+
     import matplotlib.pyplot as plt
     import geopandas as gpd
 
@@ -101,3 +101,4 @@ Below is an example of how to visualize the calculated indices using the `matplo
     results.plot(column='HHI', legend=True, cmap='plasma')
     plt.title('Herfindahl-Hirschman Index Visualization')
     plt.show()
+
