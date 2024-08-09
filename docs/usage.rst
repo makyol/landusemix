@@ -42,7 +42,7 @@ If you want to display the input raster data, the following code snippet demonst
     import matplotlib.pyplot as plt
 
     # Open the raster file
-    with rasterio.open('raster.tif') as src:
+    with rasterio.open('raster.tiff') as src:
         # Read the raster image
         raster_image = src.read(1)
 
@@ -58,7 +58,7 @@ If you want to display the input raster data, the following code snippet demonst
 
 Adjust the size of the image
 
-.. image:: raster.png 
+.. image:: raster_new.png 
     :alt: An example raster image
     :align: center
 
