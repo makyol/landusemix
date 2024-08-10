@@ -1,6 +1,7 @@
 import unittest
 from landusemix import LandUseMixIndices
 import math
+from landusemix.utils import *
 
 
 class TestLandUseMixIndices(unittest.TestCase):
@@ -69,6 +70,18 @@ class TestLandUseMixIndices(unittest.TestCase):
         self.assertAlmostEqual(
             indices.herfindahl_hirschman_index(), round(expected, 2))
 
+    # Test Cases for loading data via utility functions
+    def test_load_sample_geojson(self):
+        self.assertIsNotNone(load_sample_geojson())
+        
+    def test_load_sample_shapefile(self):
+        self.assertIsNotNone(load_sample_shapefile())
+        
+    def test_load_sample_csv(self):
+        self.assertIsNotNone(load_sample_csv())
+        
+    def test_load_sample_raster(self):
+        self.assertIsNotNone(load_sample_raster())
 
 if __name__ == "__main__":
     unittest.main()

@@ -56,8 +56,6 @@ If you want to display the input raster data, the following code snippet demonst
         # Output:
         # Display the raster image in a matplotlib plot.
 
-Adjust the size of the image
-
 .. image:: raster_new.png 
     :alt: An example raster image
     :align: center

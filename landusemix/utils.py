@@ -107,7 +107,7 @@ def load_sample_shapefile():
     Returns:
     geopandas.GeoDataFrame: The loaded sample GeoDataFrame.
     """
-    sample_path = os.path.join(os.path.dirname(__file__), 'data', 'shapefiles', 'multiple', 'multiple.shp')
+    sample_path = os.path.join(os.path.dirname(__file__), 'data', 'shapefiles', 'multiple.shp')
     return load_shapefile(sample_path)
 
 
