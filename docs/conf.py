@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.abspath('../landusemix'))
 # -- Project information -----------------------------------------------------
 project = 'Land Use Mix'
 author = 'Mehmet Ali Akyol'
-release = '0.1.1'
+release = '0.1.2'
 
 # -- General configuration ---------------------------------------------------
 extensions = [
