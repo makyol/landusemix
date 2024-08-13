@@ -2,17 +2,46 @@
 Usage
 =====
 
-Here's how you can use the `landusemix` package to calculate the entropy and HHI indices.
+Calculating Land Use Mix (LUM) within a Specified Area
+======================================================
+
+The `landusemix` package allows you to calculate Land Use Mix (LUM) within a specified area, such as a fishnet grid cell or any other geo-referenced area. The process involves calculating the areas of each specific land use type within the specified area and providing these areas to the core functions of the package to calculate LUM using two different indices: the Entropy Index and the Herfindahl-Hirschman Index (HHI).
+
+Steps to Calculate LUM:
+-----------------------
+
+1. **Define the Specified Area**: This could be a fishnet grid cell or any other geo-referenced area.
+2. **Calculate Areas of Each Land Use Type**: Determine the area (in square meters) of each land use type within the specified area.
+3. **Provide Areas to the Package**: Use the calculated areas as input to the `LandUseMixIndices` class.
+4. **Calculate Indices**: Use the `entropy_index` and `herfindahl_hirschman_index` methods to calculate the LUM.
+
+Example:
+--------
 
 .. code-block:: python
 
     from landusemix import LandUseMixIndices  # Updated import statement
+    from landusemix.utils import *
+
+    # Read areas from the shapefiles.
+    res_shp = 'landusemix/data/shapefiles/residential.shp'
+    com_shp = 'landusemix/data/shapefiles/commercial.shp'
+    ind_shp = 'landusemix/data/shapefiles/industrial.shp'
+
+    # Calculate the areas of each land use type
+    res_gdf = load_shapefile(res_shp)
+    com_gdf = load_shapefile(com_shp)
+    ind_gdf = load_shapefile(ind_shp)
+    res_area = res_gdf.geometry.area.sum()
+    com_area = com_gdf.geometry.area.sum()
+    ind_area = ind_gdf.geometry.area.sum()
+
 
     # Example land use areas (in square meters)
     land_use_areas = {
-        'residential': 5000,
-        'commercial': 3000,
-        'industrial': 2000,
+        'residential': res_area,
+        'commercial': com_area,
+        'industrial': ind_area,
     }
 
     # Create an instance of the LandUseMixIndices class
